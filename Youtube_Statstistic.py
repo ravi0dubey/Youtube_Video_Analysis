@@ -13,7 +13,6 @@ class YTstats:
     def get_channel_statistics(self):
         all_data = []
         youtube = build('youtube', 'v3', developerKey=self.api_key)
-        print(self.channel_id)
         request = youtube.channels().list(part='snippet,contentDetails,statistics',id=','.join(self.channel_id))
         response = request.execute()
         for i in range(len(response['items'])):

@@ -11,8 +11,9 @@ channel_ids = ['UCnz-ZXXER4jOvuED5trXfEA', # techTFQ
                'UC2UXDak6o7rBm23k3Vv5dww' # Tina Huang
               ]
 
-
 yt= YTstats(api_key,channel_ids )
-channel_Statistics = yt.get_channel_statistics()
-print(channel_Statistics)
+channel_statistics = yt.get_channel_statistics()
+channel_data = pd.DataFrame(channel_statistics)
+print(channel_data)
+
 
