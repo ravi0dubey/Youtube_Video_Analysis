@@ -20,7 +20,7 @@ channel_data['Total_Videos']= pd.to_numeric(channel_data['Total_Videos'])
 print(channel_data)
 # x = channel_data['Channel_name']
 # y = channel_data['Subscribers']
-sns.set(rc={'figure.figsize':(10,8)})
+# sns.set(rc={'figure.figsize':(10,8)})
 ax_subscribers_count= sns.barplot(x='Channel_name',y='Subscribers',data= channel_data)
 # plt.bar(x,y)
 plt.show()
